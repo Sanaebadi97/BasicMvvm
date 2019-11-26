@@ -7,7 +7,7 @@ import test.test.basicmvvm.viewmodel.QouteViewModelFactory
 object InjectorUtils {
 
     fun provideQuotesViewModelFactory(): QouteViewModelFactory {
-        val quoteRepository = QuoteRepository.getIstance(FakeDatabase.getIstance().quoteDao)
+        val quoteRepository = QuoteRepository.getIstance(FakeDatabase.getInstanced().quoteDao)
         return QouteViewModelFactory(quoteRepository)
     }
 }

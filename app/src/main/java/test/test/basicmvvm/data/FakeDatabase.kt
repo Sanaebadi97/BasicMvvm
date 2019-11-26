@@ -9,7 +9,7 @@ class FakeDatabase private constructor() {
         @Volatile
         private var instance: FakeDatabase? = null
 
-        fun getIstance() =
+        fun getInstanced() =
             instance ?: synchronized(this) {
                 instance
                     ?: FakeDatabase().also { instance = it }
